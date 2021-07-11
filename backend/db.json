@@ -24,6 +24,16 @@
       "name": "Mamadeira",
       "price": "10.00",
       "id": 5
+    },
+    {
+      "name": "Caderno A5",
+      "price": "20.00",
+      "id": 6
+    },
+    {
+      "name": "teste",
+      "price": 0,
+      "id": 7
     }
   ]
 }
