@@ -13,29 +13,34 @@ export class ProductService {
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
-  showMessage(msg:string):void{
-    this.snackBar.open(msg, 'X',{
+  showMessage(msg: string): void {
+    this.snackBar.open(msg, 'X', {
       duration: 3000,
-      horizontalPosition:"right",
+      horizontalPosition: "right",
       verticalPosition: "top"
     })
   }
 
-  create(product: Product): Observable<Product>{
+  create(product: Product): Observable<Product> {
     return this.http.post<Product>(this.baseURL, product)
   }
 
-  read():Observable<Product[]>{
+  read(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseURL)
   }
 
-  readById(id:number|string|null):Observable<Product>{
+  readById(id: number | string | null): Observable<Product> {
     const url = `${this.baseURL}/${id}`
     return this.http.get<Product>(url)
   }
 
-  update(product:Product):Observable<Product>{
+  update(product: Product): Observable<Product> {
     const url = `${this.baseURL}/${product.id}`
     return this.http.put<Product>(url, product)
+  }
+
+  delete(id: string|null): Observable<Product> {
+    const url = `${this.baseURL}/${id}`
+    return this.http.delete<Product>(url)
   }
 }

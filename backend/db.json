@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Caneta BIC Preta",
-      "price": 5.89
-    },
-    {
       "id": 2,
       "name": "Notebook Mac Pro",
       "price": 12000
@@ -24,11 +19,6 @@
       "name": "Mamadeira",
       "price": "10.00",
       "id": 5
-    },
-    {
-      "name": "Caderno A5",
-      "price": "20.00",
-      "id": 6
     },
     {
       "name": "Boneca",
